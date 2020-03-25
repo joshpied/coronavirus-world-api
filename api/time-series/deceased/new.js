@@ -1,8 +1,9 @@
-const axios = require('axios');
-const csv = require('csvtojson');
+import axios from 'axios';
+import {csv} from 'csvtojson';
+import { convertTotalsToNewCases } from '../../_utils';
 
 module.exports = async (req, res) => {
-  const url = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv`;
+  const url = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv`;
   try {
     const response = await axios.get(url);
     const statsCsvString = response.data;
@@ -13,7 +14,6 @@ module.exports = async (req, res) => {
       const countryName = stats[i]['Country/Region'];
 
       if (countryName in formattedStatsObj) {
-        // console.log(countryName, stats[i]['3/22/20']);
         for (let dateKey in formattedStatsObj[countryName]) {
           if (dateKey !== 'coordinates') {
             formattedStatsObj[countryName][dateKey] += parseInt(
@@ -21,9 +21,7 @@ module.exports = async (req, res) => {
             );
           }
         }
-      }
-      // formattedStatsObj[countryName] = stats[i];
-      else {
+      } else {
         formattedStatsObj[countryName] = stats[i];
         const coordinates = {
           latitude: parseFloat(formattedStatsObj[countryName]['Lat']),
@@ -43,10 +41,10 @@ module.exports = async (req, res) => {
       }
     }
 
-    // console.log(formattedStatsObj['Afghanistan'][]);
+    const newDeceasedByCountry = convertTotalsToNewCases(formattedStatsObj);
 
     res.status(200).json({
-      countries: formattedStatsObj, //[stats[0], stats[1]],
+      countries: newDeceasedByCountry,
       length: Object.keys(formattedStatsObj).length,
       success: true
     });

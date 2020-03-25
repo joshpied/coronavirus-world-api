@@ -1,8 +1,8 @@
-const axios = require('axios');
-const csv = require('csvtojson');
+import axios from 'axios';
+import {csv} from 'csvtojson';
 
 module.exports = async (req, res) => {
-  const url = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv`;
+  const url = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv`;
   try {
     const response = await axios.get(url);
     const statsCsvString = response.data;
@@ -20,8 +20,7 @@ module.exports = async (req, res) => {
             );
           }
         }
-      }
-      else {
+      } else {
         formattedStatsObj[countryName] = stats[i];
         const coordinates = {
           latitude: parseFloat(formattedStatsObj[countryName]['Lat']),
