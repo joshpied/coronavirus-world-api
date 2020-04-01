@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export const convertTotalsToNewCases = countriesObj => {
   for (let country in countriesObj) {
     let previousDayTotal = 'init';
@@ -63,4 +65,27 @@ export const formatToCountryObj = stats => {
 
 export const getLastObject = obj => {
   return obj[Object.keys(obj)[Object.keys(obj).length - 1]];
+};
+
+/**
+ * Takes an array of daily stats and sums the total cases for the specified day
+ * @param {array} stats array of objects from csv for daily recovered, deceased, confirmed cases
+ * @param {string} date string formatted as 'm/d/y'
+ */
+export const dailyStatSum = (stats, date) => {
+  return stats
+    .map(stat => parseInt(stat[date]))
+    .reduce((prev, next) => prev + next);
+};
+
+/**
+ * If today's date in object, can return that date, otherwise return yesterday's date
+ * @param {Object} statObj object representing one line from raw csv to extract most recent date from
+ */
+export const getMostRecentDate = statObj => {
+  const today = dayjs().format('M/D/YY');
+  if (statObj.hasOwnProperty(today)) return today;
+  return dayjs()
+    .subtract(1, 'day')
+    .format('M/D/YY');
 };
