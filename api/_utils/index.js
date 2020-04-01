@@ -6,7 +6,8 @@ export const convertTotalsToNewCases = countriesObj => {
         previousDayTotal = countriesObj[country]['dates'][dateKey];
       } else {
         const currentDayTotal = countriesObj[country]['dates'][dateKey];
-        countriesObj[country]['dates'][dateKey] = currentDayTotal - previousDayTotal;
+        countriesObj[country]['dates'][dateKey] =
+          currentDayTotal - previousDayTotal;
         previousDayTotal = currentDayTotal;
       }
     }
@@ -58,4 +59,8 @@ export const formatToCountryObj = stats => {
   }
 
   return formattedStatsObj;
+};
+
+export const getLastObject = obj => {
+  return obj[Object.keys(obj)[Object.keys(obj).length - 1]];
 };
