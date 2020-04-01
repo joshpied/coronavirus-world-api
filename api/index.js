@@ -1,5 +1,11 @@
 module.exports = async (req, res) => {
   res.status(200).json({
+    '/countries': {
+      route: 'https://coronavirus-world-api.now.sh/api/countries',
+      '/[countryCode]': {
+        route: 'https://coronavirus-world-api.now.sh/api/countries/ca'
+      }
+    },
     '/time-series': {
       '/confirmed': {
         route: 'https://coronavirus-world-api.now.sh/api/time-series/confirmed',
