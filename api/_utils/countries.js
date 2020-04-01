@@ -20,7 +20,7 @@ export const countries = [
     code: 'AS'
   },
   {
-    name: 'AndorrA',
+    name: 'Andorra',
     code: 'AD'
   },
   {
@@ -584,6 +584,10 @@ export const countries = [
     code: 'MN'
   },
   {
+    name: 'Montenegro',
+    code: 'ME'
+  },
+  {
     name: 'Montserrat',
     code: 'MS'
   },
@@ -720,7 +724,7 @@ export const countries = [
     code: 'RO'
   },
   {
-    name: 'Russian Federation',
+    name: 'Russia',
     code: 'RU'
   },
   {
@@ -768,8 +772,8 @@ export const countries = [
     code: 'SN'
   },
   {
-    name: 'Serbia and Montenegro',
-    code: 'CS'
+    name: 'Serbia',
+    code: 'RS'
   },
   {
     name: 'Seychelles',

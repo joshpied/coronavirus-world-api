@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { csv } from 'csvtojson';
-import { formatToCountryObj, getLastObject } from '../../_utils';
-import { getCountryNameByCode } from '../../_utils/countries';
+import { formatToCountryObj } from '../../../_utils';
+import { getCountryNameByCode } from '../../../_utils/countries';
 
 async function convertCSVtoObj(csvString) {
   const stats = await csv().fromString(csvString);
@@ -47,30 +47,18 @@ module.exports = async (req, res) => {
         message: `No data available for ${countryNameAndCode.name}`
       });
     else {
-      // get latest total for each stats in dates object
-      const stats = {
-        confirmed: getLastObject(confirmedCases[countryNameAndCode.name].dates),
-        deceased: getLastObject(deceasedCases[countryNameAndCode.name].dates),
-        recovered: getLastObject(recoveredCases[countryNameAndCode.name].dates)
-      };
       // format final return object
-      const countryObj = {
+      const country = {
         ...countryNameAndCode,
         coordinates: confirmedCases[countryNameAndCode.name].coordinates,
-        stats
+        confirmedDates: confirmedCases[countryNameAndCode.name].dates,
+        deceasedDates: deceasedCases[countryNameAndCode.name].dates,
+        recoveredDates: recoveredCases[countryNameAndCode.name].dates
       };
-      // include time series for all 3 stats detailed=true query passed, same dates as time-series/index route
-      if (req.query.detailed) {
-        countryObj.confirmedDates =
-          confirmedCases[countryNameAndCode.name].dates;
-        countryObj.deceasedDates = deceasedCases[countryNameAndCode.name].dates;
-        countryObj.recoveredDates =
-          recoveredCases[countryNameAndCode.name].dates;
-      }
 
       res.status(200).json({
         success: true,
-        country: countryObj
+        country
       });
     }
   } catch (e) {

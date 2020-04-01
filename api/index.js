@@ -3,7 +3,23 @@ module.exports = async (req, res) => {
     '/countries': {
       route: 'https://coronavirus-world-api.now.sh/api/countries',
       '/[countryCode]': {
-        route: 'https://coronavirus-world-api.now.sh/api/countries/ca'
+        route: 'https://coronavirus-world-api.now.sh/api/countries/ca',
+        'time-series': {
+          route:
+            'https://coronavirus-world-api.now.sh/api/countries/ca/time-series',
+          confirmed: {
+            route:
+              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/confirmed'
+          },
+          deceased: {
+            route:
+              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/deceased'
+          },
+          recovered: {
+            route:
+              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/recovered'
+          }
+        }
       }
     },
     '/time-series': {
