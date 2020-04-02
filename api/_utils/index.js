@@ -67,6 +67,10 @@ export const getLastObject = obj => {
   return obj[Object.keys(obj)[Object.keys(obj).length - 1]];
 };
 
+export const getLastObjectKey = obj => {
+  return Object.keys(obj)[Object.keys(obj).length - 1];
+};
+
 /**
  * Takes an array of daily stats and sums the total cases for the specified day
  * @param {array} stats array of objects from csv for daily recovered, deceased, confirmed cases

@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
     );
 
     res.status(200).json({
-      currentStats: { cases, deceased, recovered, lastUpdated },
+      recentStats: { cases, deceased, recovered, lastUpdated },
       success: true
     });
   } catch (e) {

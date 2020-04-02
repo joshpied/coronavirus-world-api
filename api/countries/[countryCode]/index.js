@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { csv } from 'csvtojson';
-import { formatToCountryObj, getLastObject } from '../../_utils';
+import {
+  formatToCountryObj,
+  getLastObject,
+  getLastObjectKey
+} from '../../_utils';
 import { getCountryNameByCode } from '../../_utils/countries';
 
 async function convertCSVtoObj(csvString) {
@@ -51,7 +55,10 @@ module.exports = async (req, res) => {
       const stats = {
         confirmed: getLastObject(confirmedCases[countryNameAndCode.name].dates),
         deceased: getLastObject(deceasedCases[countryNameAndCode.name].dates),
-        recovered: getLastObject(recoveredCases[countryNameAndCode.name].dates)
+        recovered: getLastObject(recoveredCases[countryNameAndCode.name].dates),
+        lastUpdated: new Date(
+          getLastObjectKey(confirmedCases[countryNameAndCode.name].dates)
+        )
       };
       // format final return object
       const countryObj = {
