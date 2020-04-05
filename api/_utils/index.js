@@ -63,10 +63,18 @@ export const formatToCountryObj = stats => {
   return formattedStatsObj;
 };
 
+/**
+ * Returns the value of the last stored item in an object by turning it into an array with Object.keys
+ * @param {*} obj 
+ */
 export const getLastObject = obj => {
   return obj[Object.keys(obj)[Object.keys(obj).length - 1]];
 };
 
+/**
+ * Returns the key of the last stored item in an object by turning it into an array with Object.keys
+ * @param {*} obj 
+ */
 export const getLastObjectKey = obj => {
   return Object.keys(obj)[Object.keys(obj).length - 1];
 };

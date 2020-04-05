@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
     '/world': {
       route: 'https://coronavirus-world-api.now.sh/api/world'
     },
-    '/countries': {
+    '/country': {
       route: 'https://coronavirus-world-api.now.sh/api/countries',
       '/[countryCode]': {
         route: 'https://coronavirus-world-api.now.sh/api/countries/ca',
