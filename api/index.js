@@ -4,23 +4,23 @@ module.exports = async (req, res) => {
       route: 'https://coronavirus-world-api.now.sh/api/world'
     },
     '/country': {
-      route: 'https://coronavirus-world-api.now.sh/api/countries',
+      route: 'https://coronavirus-world-api.now.sh/api/country',
       '/[countryCode]': {
-        route: 'https://coronavirus-world-api.now.sh/api/countries/ca',
+        route: 'https://coronavirus-world-api.now.sh/api/country/ca',
         '/time-series': {
           route:
-            'https://coronavirus-world-api.now.sh/api/countries/ca/time-series',
+            'https://coronavirus-world-api.now.sh/api/country/ca/time-series',
           '/confirmed': {
             route:
-              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/confirmed'
+              'https://coronavirus-world-api.now.sh/api/country/ca/time-series/confirmed'
           },
           '/deceased': {
             route:
-              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/deceased'
+              'https://coronavirus-world-api.now.sh/api/country/ca/time-series/deceased'
           },
           '/recovered': {
             route:
-              'https://coronavirus-world-api.now.sh/api/countries/ca/time-series/recovered'
+              'https://coronavirus-world-api.now.sh/api/country/ca/time-series/recovered'
           }
         }
       }
