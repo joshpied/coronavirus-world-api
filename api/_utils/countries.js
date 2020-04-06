@@ -4,7 +4,7 @@ export const countries = [
     code: 'AF'
   },
   {
-    name: 'Åland Islands',
+    name: 'Aland Islands',
     code: 'AX'
   },
   {
@@ -108,6 +108,10 @@ export const countries = [
     code: 'BO'
   },
   {
+    name: 'Bonaire, Saint Eustatius and Saba ',
+    code: 'BQ'
+  },
+  {
     name: 'Bosnia and Herzegovina',
     code: 'BA'
   },
@@ -128,7 +132,11 @@ export const countries = [
     code: 'IO'
   },
   {
-    name: 'Brunei Darussalam',
+    name: 'British Virgin Islands',
+    code: 'VG'
+  },
+  {
+    name: 'Brunei',
     code: 'BN'
   },
   {
@@ -142,6 +150,10 @@ export const countries = [
   {
     name: 'Burundi',
     code: 'BI'
+  },
+  {
+    name: 'Cabo Verde',
+    code: 'CV'
   },
   {
     name: 'Cambodia',
@@ -184,7 +196,7 @@ export const countries = [
     code: 'CX'
   },
   {
-    name: 'Cocos (Keeling) Islands',
+    name: 'Cocos Islands',
     code: 'CC'
   },
   {
@@ -196,24 +208,12 @@ export const countries = [
     code: 'KM'
   },
   {
-    name: 'Congo',
-    code: 'CG'
-  },
-  {
-    name: 'Congo, The Democratic Republic of the',
-    code: 'CD'
-  },
-  {
     name: 'Cook Islands',
     code: 'CK'
   },
   {
     name: 'Costa Rica',
     code: 'CR'
-  },
-  {
-    name: 'Cote D"Ivoire',
-    code: 'CI'
   },
   {
     name: 'Croatia',
@@ -224,12 +224,24 @@ export const countries = [
     code: 'CU'
   },
   {
+    name: 'Curacao',
+    code: 'CW'
+  },
+  {
     name: 'Cyprus',
     code: 'CY'
   },
   {
     name: 'Czech Republic',
     code: 'CZ'
+  },
+  {
+    name: 'Czechia',
+    code: 'CZ'
+  },
+  {
+    name: 'Congo (Kinshasa)',
+    code: 'CD'
   },
   {
     name: 'Denmark',
@@ -246,6 +258,10 @@ export const countries = [
   {
     name: 'Dominican Republic',
     code: 'DO'
+  },
+  {
+    name: 'Timor-Leste',
+    code: 'TL'
   },
   {
     name: 'Ecuador',
@@ -276,7 +292,7 @@ export const countries = [
     code: 'ET'
   },
   {
-    name: 'Falkland Islands (Malvinas)',
+    name: 'Falkland Islands',
     code: 'FK'
   },
   {
@@ -360,12 +376,12 @@ export const countries = [
     code: 'GG'
   },
   {
-    name: 'Guinea',
-    code: 'GN'
-  },
-  {
     name: 'Guinea-Bissau',
     code: 'GW'
+  },
+  {
+    name: 'Guinea',
+    code: 'GN'
   },
   {
     name: 'Guyana',
@@ -376,12 +392,8 @@ export const countries = [
     code: 'HT'
   },
   {
-    name: 'Heard Island and Mcdonald Islands',
+    name: 'Heard Island and McDonald Islands',
     code: 'HM'
-  },
-  {
-    name: 'Holy See (Vatican City State)',
-    code: 'VA'
   },
   {
     name: 'Honduras',
@@ -408,7 +420,7 @@ export const countries = [
     code: 'ID'
   },
   {
-    name: 'Iran, Islamic Republic Of',
+    name: 'Iran',
     code: 'IR'
   },
   {
@@ -430,6 +442,10 @@ export const countries = [
   {
     name: 'Italy',
     code: 'IT'
+  },
+  {
+    name: "Cote d'Ivoire",
+    code: 'CI'
   },
   {
     name: 'Jamaica',
@@ -460,12 +476,12 @@ export const countries = [
     code: 'KI'
   },
   {
-    name: 'Korea, Democratic People"S Republic of',
-    code: 'KP'
-  },
-  {
     name: 'Korea, South',
     code: 'KR'
+  },
+  {
+    name: 'Kosovo',
+    code: 'XK'
   },
   {
     name: 'Kuwait',
@@ -476,7 +492,7 @@ export const countries = [
     code: 'KG'
   },
   {
-    name: 'Lao People"S Democratic Republic',
+    name: 'Laos',
     code: 'LA'
   },
   {
@@ -496,7 +512,7 @@ export const countries = [
     code: 'LR'
   },
   {
-    name: 'Libyan Arab Jamahiriya',
+    name: 'Libya',
     code: 'LY'
   },
   {
@@ -516,12 +532,16 @@ export const countries = [
     code: 'MO'
   },
   {
-    name: 'Macedonia, The Former Yugoslav Republic of',
+    name: 'North Macedonia',
     code: 'MK'
   },
   {
     name: 'Madagascar',
     code: 'MG'
+  },
+  {
+    name: 'Mainland China',
+    code: 'CN'
   },
   {
     name: 'Malawi',
@@ -568,11 +588,11 @@ export const countries = [
     code: 'MX'
   },
   {
-    name: 'Micronesia, Federated States of',
+    name: 'Micronesia',
     code: 'FM'
   },
   {
-    name: 'Moldova, Republic of',
+    name: 'Moldova',
     code: 'MD'
   },
   {
@@ -600,7 +620,7 @@ export const countries = [
     code: 'MZ'
   },
   {
-    name: 'Myanmar',
+    name: 'Burma',
     code: 'MM'
   },
   {
@@ -618,10 +638,6 @@ export const countries = [
   {
     name: 'Netherlands',
     code: 'NL'
-  },
-  {
-    name: 'Netherlands Antilles',
-    code: 'AN'
   },
   {
     name: 'New Caledonia',
@@ -672,7 +688,7 @@ export const countries = [
     code: 'PW'
   },
   {
-    name: 'Palestinian Territory, Occupied',
+    name: 'West Bank and Gaza',
     code: 'PS'
   },
   {
@@ -686,6 +702,10 @@ export const countries = [
   {
     name: 'Paraguay',
     code: 'PY'
+  },
+  {
+    name: "People's Republic of Korea",
+    code: 'KP'
   },
   {
     name: 'Peru',
@@ -716,6 +736,10 @@ export const countries = [
     code: 'QA'
   },
   {
+    name: 'Congo (Brazzaville)',
+    code: 'CG'
+  },
+  {
     name: 'Reunion',
     code: 'RE'
   },
@@ -728,8 +752,12 @@ export const countries = [
     code: 'RU'
   },
   {
-    name: 'RWANDA',
+    name: 'Rwanda',
     code: 'RW'
+  },
+  {
+    name: 'Saint Barthelemy',
+    code: 'BL'
   },
   {
     name: 'Saint Helena',
@@ -742,6 +770,10 @@ export const countries = [
   {
     name: 'Saint Lucia',
     code: 'LC'
+  },
+  {
+    name: 'Saint Martin',
+    code: 'MF'
   },
   {
     name: 'Saint Pierre and Miquelon',
@@ -788,6 +820,10 @@ export const countries = [
     code: 'SG'
   },
   {
+    name: 'Sint Maarten',
+    code: 'SX'
+  },
+  {
     name: 'Slovakia',
     code: 'SK'
   },
@@ -812,6 +848,10 @@ export const countries = [
     code: 'GS'
   },
   {
+    name: 'South Sudan',
+    code: 'SS'
+  },
+  {
     name: 'Spain',
     code: 'ES'
   },
@@ -832,7 +872,7 @@ export const countries = [
     code: 'SJ'
   },
   {
-    name: 'Swaziland',
+    name: 'Eswatini',
     code: 'SZ'
   },
   {
@@ -844,11 +884,11 @@ export const countries = [
     code: 'CH'
   },
   {
-    name: 'Syrian Arab Republic',
+    name: 'Syria',
     code: 'SY'
   },
   {
-    name: 'Taiwan, Province of China',
+    name: 'Taiwan*',
     code: 'TW'
   },
   {
@@ -856,16 +896,12 @@ export const countries = [
     code: 'TJ'
   },
   {
-    name: 'Tanzania, United Republic of',
+    name: 'Tanzania',
     code: 'TZ'
   },
   {
     name: 'Thailand',
     code: 'TH'
-  },
-  {
-    name: 'Timor-Leste',
-    code: 'TL'
   },
   {
     name: 'Togo',
@@ -904,6 +940,10 @@ export const countries = [
     code: 'TV'
   },
   {
+    name: 'U.S. Virgin Islands',
+    code: 'VI'
+  },
+  {
     name: 'Uganda',
     code: 'UG'
   },
@@ -920,16 +960,16 @@ export const countries = [
     code: 'GB'
   },
   {
-    name: 'US',
-    code: 'US'
-  },
-  {
     name: 'United States Minor Outlying Islands',
     code: 'UM'
   },
   {
     name: 'Uruguay',
     code: 'UY'
+  },
+  {
+    name: 'US',
+    code: 'US'
   },
   {
     name: 'Uzbekistan',
@@ -940,20 +980,16 @@ export const countries = [
     code: 'VU'
   },
   {
+    name: 'Holy See',
+    code: 'VA'
+  },
+  {
     name: 'Venezuela',
     code: 'VE'
   },
   {
     name: 'Vietnam',
     code: 'VN'
-  },
-  {
-    name: 'Virgin Islands, British',
-    code: 'VG'
-  },
-  {
-    name: 'Virgin Islands, U.S.',
-    code: 'VI'
   },
   {
     name: 'Wallis and Futuna',
@@ -981,6 +1017,8 @@ export const getCountryNameByCode = code => {
   return countries.filter(country => country.code === code.toUpperCase())[0];
 };
 
-export const getCountryCodeByName = name => {
-  return countries.filter(country => country.name.toUpperCase() === name.toUpperCase())[0];
+export const getCountryByName = name => {
+  return countries.filter(
+    country => country.name.toUpperCase() === name.toUpperCase()
+  )[0];
 };
