@@ -40,7 +40,6 @@ module.exports = async (req, res) => {
     // getting the latest date total for each stat
     const countries = Object.keys(confirmedCases)
       .map(countryName => ({
-        countryName,
         ...getCountryByName(countryName),
         coordinates: confirmedCases[countryName].coordinates,
         stats: {

@@ -108,7 +108,7 @@ export const countries = [
     code: 'BO'
   },
   {
-    name: 'Bonaire, Saint Eustatius and Saba ',
+    name: 'Bonaire, Sint Eustatius and Saba',
     code: 'BQ'
   },
   {
@@ -292,7 +292,7 @@ export const countries = [
     code: 'ET'
   },
   {
-    name: 'Falkland Islands',
+    name: 'Falkland Islands (Malvinas)',
     code: 'FK'
   },
   {
@@ -772,7 +772,7 @@ export const countries = [
     code: 'LC'
   },
   {
-    name: 'Saint Martin',
+    name: 'St Martin',
     code: 'MF'
   },
   {
